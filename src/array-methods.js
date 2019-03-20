@@ -21,15 +21,15 @@ const planetEl = document.getElementById("planets")
 
     https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase
     */
-   const planetsUpper = planets.map(planet => {
-       return " " + planet.charAt(0).toUpperCase() + planet.slice(1);
-    })
-    //create a table in console
-    console.table(planetsUpper)
-    planetEl.innerHTML += `
-    <h2> ${planetsUpper}</h2>
-    `
-    planetEl.innerHTML += "<hr/>"
+// const planetsUpper = planets.map(planet => {
+//     return " " + planet.charAt(0).toUpperCase() + planet.slice(1);
+// })
+// //create a table in console
+// console.table(planetsUpper)
+// planetEl.innerHTML += `
+//     <h2> ${planetsUpper}</h2>
+//     `
+// planetEl.innerHTML += "<hr/>"
 
 /*
     Use the filter method to create a new array that
@@ -38,3 +38,8 @@ const planetEl = document.getElementById("planets")
 
     https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes
 */
+// Array to contain all the big spenders
+const planetsWithE = planets.filter(planet => {
+    return planet.includes("e")
+})
+console.table(planetsWithE);
